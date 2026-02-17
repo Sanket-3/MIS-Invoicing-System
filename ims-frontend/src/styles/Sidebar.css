@@ -1,0 +1,96 @@
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1c1f3a, #15182f);
+  color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.menu a,
+.menu-disabled {
+  display: block;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #cfd3ff;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.menu a:hover {
+  background: #5f6cff;
+  color: #fff;
+}
+
+.menu a.active {
+  background: #5f6cff;
+  color: #fff;
+}
+
+.menu-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== MODERN SAAS BRAND LOGO ===== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 18px;
+}
+
+/* Icon box */
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #06b6d4,
+    #22c55e
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 10px 30px rgba(79, 70, 229, 0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.25);
+}
+
+/* Big brand letter */
+.logo-i {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Text block */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text .brand {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+}
+
+.logo-text small {
+  font-size: 12px;
+  font-weight: 500;
+  color: #c7d2fe;
+  opacity: 0.9;
+}

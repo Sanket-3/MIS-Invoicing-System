@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* BACKGROUND */
+.auth-root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #eef2ff, #e0e7ff);
+}
+
+/* CARD */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 36px;
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* ANIMATION */
+.animate-fade {
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TEXT */
+h1 {
+  margin-bottom: 8px;
+  font-size: 26px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 26px;
+}
+
+/* INPUTS */
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #c7d2fe;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* BUTTON */
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.4);
+}
+
+/* TRUST */
+.trust-text {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* SWITCH */
+.switch-text {
+  margin-top: 18px;
+  font-size: 13px;
+}
+
+.switch-text a {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+.error-text {
+  margin-top: 10px;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.error-text {
+  margin-top: 10px;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+/* SUCCESS MESSAGE */
+.success-text {
+  margin-top: 10px;
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 600;
+  animation: popFade 0.6s ease;
+}
+
+/* POP ANIMATION */
+@keyframes popFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
