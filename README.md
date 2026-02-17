@@ -2,14 +2,14 @@
 
 A comprehensive Management Information System (MIS) and Invoicing System built with modern web technologies. This application provides user management, group management, and invoicing capabilities with a clean, responsive interface.
 
-## 🏗️ Architecture
+##  Architecture
 
 This project follows a full-stack architecture with separate backend and frontend applications:
 
 - **Backend**: Spring Boot REST API (`ims/`)
 - **Frontend**: React.js Single Page Application (`ims-frontend/`)
 
-## 🚀 Technologies Used
+##  Technologies Used
 
 ### Backend (Spring Boot)
 - **Java 17+**
@@ -26,7 +26,7 @@ This project follows a full-stack architecture with separate backend and fronten
 - **CSS3** - Custom styling
 - **Axios** - HTTP client for API calls
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 mis-invoicing-system/
@@ -103,7 +103,7 @@ mis-invoicing-system/
     └── eslint.config.js
 ```
 
-## ✨ Features
+##  Features
 
 ### User Management
 - User registration and authentication
@@ -120,7 +120,7 @@ mis-invoicing-system/
 - Responsive design for all devices
 - Real-time data visualization
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 ### Prerequisites
 - Java 17 or higher
@@ -165,7 +165,7 @@ mis-invoicing-system/
 
 4. Frontend will be available at `http://localhost:5173`
 
-## 🔧 Configuration
+##  Configuration
 
 ### Backend Configuration
 - Database settings: `ims/src/main/resources/application.properties`
@@ -175,7 +175,7 @@ mis-invoicing-system/
 - API base URL: Update in service files under `ims-frontend/src/services/`
 - Build settings: `ims-frontend/vite.config.js`
 
-## 📱 API Endpoints
+##  API Endpoints
 
 ### Authentication
 - `POST /api/auth/login` - User login
@@ -187,4 +187,3 @@ mis-invoicing-system/
 - `PUT /api/groups/{id}` - Update group
 - `DELETE /api/groups/{id}` - Delete group
 
-*
