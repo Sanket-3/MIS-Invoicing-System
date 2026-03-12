@@ -7,10 +7,12 @@ import Login from "./pages/login";
 import Register from "./pages/Register";
 import DashboardHome from "./pages/DashboardHome";
 import Groups from "./pages/Groups";
+import Chains from "./pages/Chains";
 
 export default function App() {
   return (
     <Routes>
+
       {/* Default */}
       <Route path="/" element={<Navigate to="/login" />} />
 
@@ -41,11 +43,18 @@ export default function App() {
 
       {/* DASHBOARD */}
       <Route path="/dashboard" element={<DashboardLayout />}>
-        <Route index element={<DashboardHome />} />
-        <Route path="groups" element={<Groups />} />
-      </Route>
-    </Routes>
 
-    
+        {/* Dashboard Home */}
+        <Route index element={<DashboardHome />} />
+
+        {/* Groups Module */}
+        <Route path="groups" element={<Groups />} />
+
+        {/* Chains Module */}
+        <Route path="chains" element={<Chains />} />
+
+      </Route>
+
+    </Routes>
   );
 }
