@@ -26,9 +26,13 @@ export default function Sidebar() {
           👥 Groups
         </NavLink>
 
-        {/* NEW MODULE */}
         <NavLink to="/dashboard/chains">
           🏢 Chains
+        </NavLink>
+
+        {/* BRAND MODULE */}
+        <NavLink to="/dashboard/brands">
+          🏷 Brands
         </NavLink>
 
         {/* Future modules */}
