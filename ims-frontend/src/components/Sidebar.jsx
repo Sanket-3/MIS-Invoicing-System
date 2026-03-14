@@ -35,6 +35,11 @@ export default function Sidebar() {
           🏷 Brands
         </NavLink>
 
+        {/* NEW ZONE MODULE */}
+        <NavLink to="/dashboard/zones">
+          📍 Zones
+        </NavLink>
+
         {/* Future modules */}
         <span className="menu-disabled">🧾 Invoices</span>
         <span className="menu-disabled">👤 Customers</span>

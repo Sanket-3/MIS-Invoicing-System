@@ -9,6 +9,7 @@ import DashboardHome from "./pages/DashboardHome";
 import Groups from "./pages/Groups";
 import Chains from "./pages/Chains";
 import Brands from "./pages/Brands.jsx";
+import Zones from "./pages/Zones.jsx";
 
 export default function App() {
   return (
@@ -56,6 +57,9 @@ export default function App() {
 
         {/* Brands Module */}
         <Route path="brands" element={<Brands />} />
+
+        {/* Zones Module */}
+        <Route path="zones" element={<Zones />} />
 
       </Route>
 
