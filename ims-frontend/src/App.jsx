@@ -10,6 +10,7 @@ import Groups from "./pages/Groups";
 import Chains from "./pages/Chains";
 import Brands from "./pages/Brands.jsx";
 import Zones from "./pages/Zones.jsx";
+import Estimates from "./pages/Estimates.jsx"; // ✅ NEW
 
 export default function App() {
   return (
@@ -60,6 +61,9 @@ export default function App() {
 
         {/* Zones Module */}
         <Route path="zones" element={<Zones />} />
+
+        {/* ✅ NEW ESTIMATE MODULE */}
+        <Route path="estimates" element={<Estimates />} />
 
       </Route>
 

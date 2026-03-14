@@ -35,9 +35,14 @@ export default function Sidebar() {
           🏷 Brands
         </NavLink>
 
-        {/* NEW ZONE MODULE */}
+        {/* ZONES */}
         <NavLink to="/dashboard/zones">
           📍 Zones
+        </NavLink>
+
+        {/* ✅ NEW ESTIMATE MODULE */}
+        <NavLink to="/dashboard/estimates">
+          🧾 Estimates
         </NavLink>
 
         {/* Future modules */}
