@@ -6,20 +6,26 @@ import DashboardLayout from "./layout/DashboardLayout";
 import Login from "./pages/login";
 import Register from "./pages/Register";
 import DashboardHome from "./pages/DashboardHome";
+
 import Groups from "./pages/Groups";
 import Chains from "./pages/Chains";
-import Brands from "./pages/Brands.jsx";
-import Zones from "./pages/Zones.jsx";
-import Estimates from "./pages/Estimates.jsx"; // ✅ NEW
+import Brands from "./pages/Brands";
+import Zones from "./pages/Zones";
+
+import Estimates from "./pages/Estimates";
+import Invoices from "./pages/Invoices";
+import CreateInvoice from "./pages/CreateInvoice";
 
 export default function App() {
+
   return (
     <Routes>
 
-      {/* Default */}
+      {/* Default Route */}
       <Route path="/" element={<Navigate to="/login" />} />
 
-      {/* AUTH */}
+      {/* AUTH ROUTES */}
+
       <Route
         path="/login"
         element={
@@ -45,25 +51,24 @@ export default function App() {
       />
 
       {/* DASHBOARD */}
+
       <Route path="/dashboard" element={<DashboardLayout />}>
 
         {/* Dashboard Home */}
         <Route index element={<DashboardHome />} />
 
-        {/* Groups Module */}
+        {/* Core Modules */}
         <Route path="groups" element={<Groups />} />
-
-        {/* Chains Module */}
         <Route path="chains" element={<Chains />} />
-
-        {/* Brands Module */}
         <Route path="brands" element={<Brands />} />
-
-        {/* Zones Module */}
         <Route path="zones" element={<Zones />} />
 
-        {/* ✅ NEW ESTIMATE MODULE */}
+        {/* Estimate Module */}
         <Route path="estimates" element={<Estimates />} />
+
+        {/* Invoice Modules */}
+        <Route path="invoices" element={<Invoices />} />
+        <Route path="create-invoice/:id" element={<CreateInvoice />} />
 
       </Route>
 

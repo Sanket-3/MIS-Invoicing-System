@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 import {
   getEstimates,
@@ -10,6 +11,8 @@ import {
 import "../styles/groups.css";
 
 const Estimates = () => {
+
+  const navigate = useNavigate();
 
   const [estimates, setEstimates] = useState([]);
 
@@ -96,8 +99,12 @@ const Estimates = () => {
   };
 
   const handleDelete = async (id) => {
-    await deleteEstimate(id);
-    fetchEstimates();
+
+    if (window.confirm("Delete this estimate?")) {
+      await deleteEstimate(id);
+      fetchEstimates();
+    }
+
   };
 
   return (
@@ -105,7 +112,7 @@ const Estimates = () => {
 
       <h2>Manage Estimates</h2>
 
-      {/* GROUP */}
+      {/* FORM */}
 
       <select value={groupName} onChange={(e) => setGroupName(e.target.value)}>
         <option value="">Select Group</option>
@@ -114,16 +121,12 @@ const Estimates = () => {
         ))}
       </select>
 
-      {/* CHAIN */}
-
       <select value={chainId} onChange={(e) => setChainId(e.target.value)}>
         <option value="">Select Company</option>
         {chains.map((c) => (
           <option key={c.id} value={c.id}>{c.companyName}</option>
         ))}
       </select>
-
-      {/* BRAND */}
 
       <select value={brandName} onChange={(e) => setBrandName(e.target.value)}>
         <option value="">Select Brand</option>
@@ -132,16 +135,12 @@ const Estimates = () => {
         ))}
       </select>
 
-      {/* ZONE */}
-
       <select value={zoneName} onChange={(e) => setZoneName(e.target.value)}>
         <option value="">Select Zone</option>
         {zones.map((z) => (
           <option key={z.id} value={z.zoneName}>{z.zoneName}</option>
         ))}
       </select>
-
-      {/* SERVICE */}
 
       <input
         placeholder="Service Details"
@@ -213,6 +212,10 @@ const Estimates = () => {
               <td>{e.totalCost}</td>
 
               <td>
+
+                <button onClick={() => navigate(`/dashboard/create-invoice/${e.id}`)}>
+                  Generate
+                </button>
 
                 <button onClick={() => handleDelete(e.id)}>
                   Delete
